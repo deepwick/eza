@@ -1,0 +1,104 @@
+# Deepwick for eza
+colourful: true
+
+filekinds:
+  normal: {foreground: "#D4D4D4"}
+  directory: {foreground: "#569CD6", is_bold: true}
+  symlink: {foreground: "#4FC1FF"}
+  pipe: {foreground: "#D7BA7D"}
+  block_device: {foreground: "#D7BA7D", is_bold: false}
+  char_device: {foreground: "#D7BA7D", is_bold: false}
+  socket: {foreground: "#D7BA7D", is_bold: false}
+  special: {foreground: "#D7BA7D"}
+  executable: {foreground: "#57A64A", is_bold: true}
+  mount_point: {foreground: "#569CD6", is_bold: true, is_underline: true}
+
+perms:
+  user_read: {foreground: "#DCDCAA", is_bold: false}
+  user_write: {foreground: "#F44747", is_bold: false}
+  user_execute_file: {foreground: "#57A64A", is_bold: false, is_underline: false}
+  user_execute_other: {foreground: "#57A64A", is_bold: false}
+  group_read: {foreground: "#DCDCAA"}
+  group_write: {foreground: "#F44747"}
+  group_execute: {foreground: "#57A64A"}
+  other_read: {foreground: "#DCDCAA"}
+  other_write: {foreground: "#F44747"}
+  other_execute: {foreground: "#57A64A"}
+  special_user_file: {foreground: "#C586C0"}
+  special_other: {foreground: "#C586C0"}
+  attribute: {foreground: "#6E7899"}
+
+size:
+  major: {foreground: "#B5CEA8", is_bold: false}
+  minor: {foreground: "#B5CEA8"}
+  number_byte: {foreground: "#B5CEA8", is_bold: false}
+  number_kilo: {foreground: "#B5CEA8", is_bold: false}
+  number_mega: {foreground: "#B5CEA8", is_bold: false}
+  number_giga: {foreground: "#B5CEA8", is_bold: false}
+  number_huge: {foreground: "#B5CEA8", is_bold: false}
+  unit_byte: {foreground: "#B5CEA8"}
+  unit_kilo: {foreground: "#B5CEA8"}
+  unit_mega: {foreground: "#B5CEA8"}
+  unit_giga: {foreground: "#B5CEA8"}
+  unit_huge: {foreground: "#B5CEA8"}
+
+users:
+  user_you: {foreground: "#9CDCFE", is_bold: false}
+  user_root: {foreground: "#9CDCFE"}
+  user_other: {foreground: "#9CDCFE"}
+  group_yours: {foreground: "#7A86A8", is_bold: false}
+  group_other: {foreground: "#7A86A8"}
+  group_root: {foreground: "#7A86A8"}
+
+links:
+  normal: {foreground: "#D4D4D4", is_bold: false}
+  multi_link_file: {foreground: "#D7BA7D", background: ""}
+
+git:
+  new: {foreground: "#4EC9B0"}
+  modified: {foreground: "#569CD6"}
+  deleted: {foreground: "#F44747"}
+  renamed: {foreground: "#569CD6"}
+  typechange: {foreground: "#569CD6"}
+  ignored: {foreground: "#6E7899", is_dimmed: false}
+  conflicted: {foreground: "#F44747"}
+
+git_repo:
+  branch_main: {foreground: "#4EC9B0"}
+  branch_other: {foreground: "#4EC9B0"}
+  git_clean: {foreground: "#57A64A"}
+  git_dirty: {foreground: "#569CD6"}
+
+security_context:
+  none: {foreground: "#6E7899"}
+  selinux:
+    colon: {foreground: "#6E7899"}
+    user: {foreground: "#9CDCFE"}
+    role: {foreground: "#4EC9B0"}
+    typ: {foreground: "#DCDCAA"}
+    range: {foreground: "#6E7899"}
+
+file_type:
+  image: {foreground: "#C586C0", is_bold: false, is_dimmed: false}
+  video: {foreground: "#C586C0", is_bold: false, is_dimmed: false}
+  music: {foreground: "#C586C0", is_bold: false, is_dimmed: false}
+  lossless: {foreground: "#C586C0", is_bold: false, is_dimmed: false}
+  crypto: {foreground: "#D7BA7D", is_bold: false, is_dimmed: false}
+  document: {foreground: "#CE9178", is_bold: false, is_dimmed: false}
+  compressed: {foreground: "#D16969", is_bold: false, is_dimmed: false}
+  temp: {foreground: "#6E7899", is_bold: false, is_dimmed: false}
+  compiled: {foreground: "#6E7899", is_bold: false, is_dimmed: false}
+  build: {foreground: "#DCDCAA", is_bold: false, is_underline: false}
+  source: {foreground: "#DCDCAA", is_bold: false}
+
+punctuation: {foreground: "#6E7899", is_bold: false}
+date: {foreground: "#7A86A8"}
+inode: {foreground: "#6E7899"}
+blocks: {foreground: "#B5CEA8"}
+header: {foreground: "#D4D4D4", is_underline: true}
+octal: {foreground: "#B5CEA8"}
+flags: {foreground: "#6E7899"}
+symlink_path: {foreground: "#4FC1FF"}
+control_char: {foreground: "#F44747"}
+broken_symlink: {foreground: "#F44747"}
+broken_path_overlay: {is_underline: true}

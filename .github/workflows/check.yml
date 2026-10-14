@@ -1,0 +1,5 @@
+name: check
+on: [push, pull_request]
+jobs:
+  port:
+    uses: deepwick/spec/.github/workflows/check.yml@main
