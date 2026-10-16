@@ -156,17 +156,6 @@ def test_port_conventions():
     assert check_port(REPO, PALETTE.allowed_hex()) == []
 
 
-def sgr_attrs(params):
-    attrs, i = set(), 0
-    while i < len(params):
-        if params[i] in ("38", "48"):
-            i += 5 if params[i + 1 : i + 2] == ["2"] else 3
-            continue
-        attrs.add(params[i])
-        i += 1
-    return attrs
-
-
 @requires_eza
 def test_file_types_drop_eza_default_bold_dim_underline(tmp_path):
     tree = make_tree(tmp_path / "tree")
@@ -175,7 +164,5 @@ def test_file_types_drop_eza_default_bold_dim_underline(tmp_path):
         (tree / name).write_text("x")
     out = run_eza(tmp_path, tree)
     for name in (*extra, "old.bak", "photo.png", "bundle.tar.gz", "notes.pdf", "app.py"):
-        line = line_with(out, name)
-        start = line.rindex("\x1b[", 0, line.index(name))
-        sgr = line[start + 2 : line.index("m", start)].split(";")
-        assert not ({"1", "2", "4"} & sgr_attrs(sgr)), (name, sgr)
+        style = style_of(line_with(out, name), name)
+        assert not (style["bold"] or style["dim"] or style["underline"]), (name, style)
