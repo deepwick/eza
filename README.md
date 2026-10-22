@@ -31,8 +31,10 @@ eza then ignores `~/.config/eza`.
 - Git column: new/untracked Teal, modified Blue, deleted Red, ignored Muted.
   Permissions: read Yellow, write Red, execute Green. Sizes Sage, users Light
   Blue, groups and dates Comment.
+- Pass a path (`eza .`) in scripts and pipelines: eza 0.23.5 prints nothing
+  when run without one and its stdin isn't a terminal.
 
-Tested with eza 0.23.4.
+Tested with eza 0.23.5.
 
 ## License
 
